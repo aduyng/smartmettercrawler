@@ -8,7 +8,6 @@
   },
   "devDependencies": {
     "coveralls": "^3.0.4",
-    "dotenv": "^8.0.0",
     "env-cmd": "^9.0.3",
     "eslint": "^6.0.1",
     "eslint-config-prettier": "^6.0.0",
@@ -66,6 +65,7 @@
   },
   "license": "MIT",
   "dependencies": {
+    "dotenv": "^8.0.0",
     "firebase-admin": "^8.2.0",
     "lodash": "^4.17.11",
     "moment": "^2.24.0",
