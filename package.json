@@ -57,7 +57,8 @@
   "scripts": {
     "pretest": "eslint .",
     "test": "jest",
-    "dev": "node -r dotenv/config src/index"
+    "dev": "node -r dotenv/config src/index",
+    "start": "node -r dotenv/config src/index"
   },
   "repository": "https://github.com/aduyng/smartmettertexas-crawler.git",
   "jest": {
