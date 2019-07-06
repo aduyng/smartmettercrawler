@@ -32,7 +32,7 @@ module.exports = async ({
     const dateRead = await (await latestEndOfDateReadSpan.getProperty(
       "innerText"
     )).jsonValue();
-    const dateReadValue = moment(dateRead, "MM/DD/YYYY").utc();
+    const dateReadValue = moment(dateRead, "MM/DD/YYYY");
 
     const latestEndOfDateMeterReadSpan = await page.$('[name="ler_read"]');
     const meterRead = parseFloat(
