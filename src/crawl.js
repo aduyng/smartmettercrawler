@@ -10,7 +10,7 @@ module.exports = async ({
 }) => {
   try {
     const browser = await puppeteer.launch({
-      headless: NODE_ENV === "development",
+      headless: NODE_ENV !== "development",
       devtools: NODE_ENV === "development",
       args: ["--no-sandbox", "--disable-setuid-sandbox"]
     });
@@ -32,7 +32,7 @@ module.exports = async ({
     const dateRead = await (await latestEndOfDateReadSpan.getProperty(
       "innerText"
     )).jsonValue();
-    const dateReadValue = moment(dateRead, "MM/DD/YYYY");
+    const dateReadValue = moment(dateRead, "MM/DD/YYYY").utc();
 
     const latestEndOfDateMeterReadSpan = await page.$('[name="ler_read"]');
     const meterRead = parseFloat(
