@@ -9,6 +9,7 @@ module.exports = async ({ dailyUsage }) => {
     .doc(dailyUsage.date.format("YYYYMMDD"));
   batch.set(dailyRef, {
     timestamp: dailyUsage.date.valueOf(),
+    date: dailyUsage.date.toDate(),
     meterRead: dailyUsage.meterRead,
     readAt: new Date()
   });
@@ -19,6 +20,7 @@ module.exports = async ({ dailyUsage }) => {
       .doc(fifteenMinuteRead.timestamp.format("YYYYMMDDHHmm"));
     batch.set(fifteenMinuteRef, {
       timestamp: fifteenMinuteRead.timestamp.valueOf(),
+      date: fifteenMinuteRead.timestamp.toDate(),
       consumption: fifteenMinuteRead.consumption,
       generation: fifteenMinuteRead.generation
     });
