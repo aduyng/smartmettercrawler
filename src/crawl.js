@@ -63,7 +63,7 @@ module.exports = async ({
       const to = moment(
         await (await toSpan.getProperty("innerText")).jsonValue(),
         "hh:mm a"
-      );
+      ).utc();
       console.log(`to ${to.format("HHmm")}`);
 
       const consumption = parseFloat(
