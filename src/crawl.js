@@ -3,7 +3,7 @@ const moment = require("moment");
 const signIn = require("./signIn");
 
 module.exports = async ({
-  SMART_METER_TEXAS_LOGIN_PAGE = "https://www.smartmetertexas.com/smt/tPartyAgreementsLogin/public/smt_login.jsp",
+  SMART_METER_TEXAS_LOGIN_PAGE = "https://www.smartmetertexas.com/CAP/public/",
   SMART_METER_TEXAS_USERNAME,
   SMART_METER_TEXAS_PASSWORD,
   NODE_ENV
