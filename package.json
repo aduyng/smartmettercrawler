@@ -68,7 +68,7 @@
   "dependencies": {
     "dotenv": "^8.0.0",
     "firebase-admin": "^8.2.0",
-    "lodash": "^4.17.11",
+    "lodash": "^4.17.19",
     "moment": "^2.24.0",
     "puppeteer": "^1.18.1"
   }
